@@ -14,8 +14,14 @@ class vec2 {
     this.x = other.x;
     this.y = other.y;
   }
+  sub(other) {
+    return new vec2(this.x - other.x, this.y - other.y);
+  }
   static copy(v) {
     return new vec2(v.x, v.y);
+  }
+  static dist(v) {
+    return Math.hypot(v.x, v.y);
   }
 }
 
